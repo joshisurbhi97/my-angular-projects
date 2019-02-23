@@ -20,6 +20,8 @@ import { StudentsComponent } from './students/students.component';
 import { StudentComponent } from './students/student/student.component';
 import { StudentService } from './shared/student.service';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
+import { OneChildComponent } from './employee-list/one-child.component';
+import { TwoChildComponent } from './employee-list/two-child.component';
 
 // import { HomeComponent } from './home/home.component';
 // import { AboutComponent } from './about/about.component';
@@ -36,7 +38,9 @@ import { RegistrationFormComponent } from './registration-form/registration-form
     ForgotPasswordComponent,
     StudentsComponent,
     StudentComponent,
-    RegistrationFormComponent
+    RegistrationFormComponent,
+    OneChildComponent,
+    TwoChildComponent
   ],
   imports: [
     BrowserModule,

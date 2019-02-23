@@ -15,6 +15,14 @@ export class EmployeeListComponent implements OnInit {
 login(usNm, pass){
 console.log(usNm);
 console.log(pass);
-this.router.navigate(['employeedetails', usNm]);
+// this.router.navigate(['employeedetails', usNm]);
+this.router.navigate(['employeedetails', usNm],
+{
+  queryParams :{
+    id : 5
+  }
+}
+);
+
 }
 }

@@ -24,8 +24,11 @@ import { ActivatedRoute, Router } from '@angular/router';
   ) {}
 
   ngOnInit() {
-    this.activatedRoute.params.subscribe( newParam => {
-      this.abc = newParam['usNm']
+    // this.activatedRoute.params.subscribe( newParam => {
+    //   this.abc = newParam['usNm']
+    // })
+    this.router.routerState.root.queryParams.subscribe(queryParamVar=>{
+      this.abc = queryParamVar['ver']
     })
   }
   ngOnDestroy() {

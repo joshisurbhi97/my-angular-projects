@@ -6,6 +6,8 @@ import { FormComponent } from './form/form.component';
 import { EmployeeListComponent } from './employee-list/employee-list.component';
 import { EmployeeDetailsComponent } from './employee-details/employee-details.component';
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
+import { OneChildComponent } from './employee-list/one-child.component';
+import { TwoChildComponent } from './employee-list/two-child.component';
 
 
 const routes: Routes = [
@@ -13,11 +15,20 @@ const routes: Routes = [
   // { path: 'about', component: AboutComponent},
   // { path: 'form', component: FormComponent},
 
-  {path:'',component:EmployeeListComponent}, 
+  // {path:'',component:EmployeeListComponent}, 
+  //  {path:'employeedetails/:usNm',component:EmployeeDetailsComponent},
+  //  {path:'forgotPassword', component:ForgotPasswordComponent}
+
+  {
+    path:'',component:EmployeeListComponent,
+    children: [
+      {path: '', component:OneChildComponent},
+      {path: 'two', component:TwoChildComponent}
+
+    ]
+  }, 
    {path:'employeedetails/:usNm',component:EmployeeDetailsComponent},
    {path:'forgotPassword', component:ForgotPasswordComponent}
-
-
 
 
 
