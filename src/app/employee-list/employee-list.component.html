@@ -1,0 +1,12 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <input type="text" placeholder="enter the username" #usNm>      
+      <input type="password" placeholder="enter the password" #pass>
+      <input type="button" value="login" class="btn btn-primary" (click)="login(usNm.value,pass.value)">
+    </div>
+  </div>
+  <div class="row">
+    <a [routerLink]="['forgotPassword']">Forgot Password</a>
+  </div>
+</div>

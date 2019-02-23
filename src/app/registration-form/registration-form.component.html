@@ -1,0 +1,62 @@
+<div class="example-container w-50 m-auto">
+    <h2 class="text-center">Registration</h2>
+
+  <mat-form-field>
+    <input matInput placeholder="Username" [formControl]="name" required>
+    <mat-error>{{getErrorMessagename()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field>
+    <input matInput placeholder="Enter your email" [formControl]="email" required>
+    <mat-error *ngIf="email.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+      <input matInput placeholder="Enter your password" [type]="hide ? 'password' : 'text'" [formControl]="pass" required>
+      <mat-icon matSuffix (click)="hide = !hide">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+      <mat-error>{{getErrorMessagepass()}}</mat-error>
+ </mat-form-field>
+ <mat-form-field>
+    <span matPrefix>+91 &nbsp;</span>
+    <input type="tel" matInput placeholder="Telephone">
+    <mat-icon matSuffix>mode_edit</mat-icon>
+  </mat-form-field>
+<!-- 
+  <mat-form-field>
+    <mat-select placeholder="Select">
+      <mat-option value="option">Option</mat-option>
+    </mat-select>
+  </mat-form-field> -->
+
+  <label>Gender</label>
+
+  <mat-radio-group>
+      <mat-radio-button value="1">Male</mat-radio-button>
+      <mat-radio-button value="2"> Female</mat-radio-button>
+      <mat-radio-button value="3"> other</mat-radio-button>
+
+    </mat-radio-group>
+    
+  
+  <mat-form-field>
+      <mat-select placeholder="Course" [formControl]="courseControl" required>
+        <mat-option>--</mat-option>
+        <mat-option *ngFor="let Course of courses" [value]="Course">
+          {{Course.name}}
+        </mat-option>
+      </mat-select>
+      <mat-error *ngIf="courseControl.hasError('required')">Please choose a course</mat-error>
+      <mat-hint>{{courseControl.value?.sound}}</mat-hint>
+    </mat-form-field>
+    <mat-form-field>
+        <mat-select placeholder="City">
+          <mat-option *ngFor="let city of cities" [value]="city.value">
+            {{city.viewValue}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+      <div class="button-row">
+          <button mat-raised-button color="primary">Submit</button>
+
+        </div>
+
+</div>
