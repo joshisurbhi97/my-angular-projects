@@ -22,6 +22,11 @@ import { StudentService } from './shared/student.service';
 import { RegistrationFormComponent } from './registration-form/registration-form.component';
 import { OneChildComponent } from './employee-list/one-child.component';
 import { TwoChildComponent } from './employee-list/two-child.component';
+import { DepartmentListComponent } from './department-list/department-list.component';
+import { DepartmentDetailsComponent } from './department-details/department-details.component';
+import { ServicesComponent } from './services/services.component';
+import { HttpClientModule } from '@angular/common/http';
+
 
 // import { HomeComponent } from './home/home.component';
 // import { AboutComponent } from './about/about.component';
@@ -40,7 +45,10 @@ import { TwoChildComponent } from './employee-list/two-child.component';
     StudentComponent,
     RegistrationFormComponent,
     OneChildComponent,
-    TwoChildComponent
+    TwoChildComponent,
+    DepartmentListComponent,
+    DepartmentDetailsComponent,
+    ServicesComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +60,7 @@ import { TwoChildComponent } from './employee-list/two-child.component';
     MaterialModule,
     ReactiveFormsModule,
     MatIconModule,
+    HttpClientModule
   ],
   providers: [StudentService],
   bootstrap: [AppComponent]

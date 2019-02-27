@@ -8,6 +8,8 @@ import { EmployeeDetailsComponent } from './employee-details/employee-details.co
 import { ForgotPasswordComponent } from './forgot-password/forgot-password.component';
 import { OneChildComponent } from './employee-list/one-child.component';
 import { TwoChildComponent } from './employee-list/two-child.component';
+import { DepartmentListComponent } from './department-list/department-list.component';
+import { ServicesComponent } from './services/services.component';
 
 
 const routes: Routes = [
@@ -19,18 +21,28 @@ const routes: Routes = [
   //  {path:'employeedetails/:usNm',component:EmployeeDetailsComponent},
   //  {path:'forgotPassword', component:ForgotPasswordComponent}
 
-  {
-    path:'',component:EmployeeListComponent,
-    children: [
-      {path: '', component:OneChildComponent},
-      {path: 'two', component:TwoChildComponent}
-
-    ]
-  }, 
-   {path:'employeedetails/:usNm',component:EmployeeDetailsComponent},
-   {path:'forgotPassword', component:ForgotPasswordComponent}
 
 
+  // {
+  //   path:'',component:EmployeeListComponent,
+  //   children: [
+  //     // {path: '', redirectTo: '/one', pathMatch: 'prefix'},
+  //     {path: '', component:OneChildComponent},
+
+  //     {path: 'one', component:OneChildComponent},
+  //     {path: 'two', component:TwoChildComponent}
+
+  //   ]
+  // }, 
+  //  {path:'employeedetails/:usNm',component:EmployeeDetailsComponent},
+  //  {path:'forgotPassword', component:ForgotPasswordComponent},
+  
+
+
+    // { path: 'department-list', component: DepartmentListComponent}
+
+  {path:'',component:ServicesComponent}
+  
 
 ];
 
@@ -39,4 +51,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomeComponent, AboutComponent, FormComponent, EmployeeListComponent, EmployeeDetailsComponent, ForgotPasswordComponent]
+export const routingComponents = [HomeComponent, AboutComponent, FormComponent, EmployeeListComponent, EmployeeDetailsComponent, ForgotPasswordComponent, DepartmentListComponent]
