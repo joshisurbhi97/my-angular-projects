@@ -10,6 +10,7 @@ import { OneChildComponent } from './employee-list/one-child.component';
 import { TwoChildComponent } from './employee-list/two-child.component';
 import { DepartmentListComponent } from './department-list/department-list.component';
 import { ServicesComponent } from './services/services.component';
+import { GuardService } from './guard.service';
 
 
 const routes: Routes = [
@@ -41,9 +42,16 @@ const routes: Routes = [
 
     // { path: 'department-list', component: DepartmentListComponent}
 
-  {path:'',component:ServicesComponent}
+
+
+
+  // {path:'',component:ServicesComponent}
   
 
+  {path:'',component:EmployeeListComponent},
+
+     {path:'employeedetails/:usNm',component:EmployeeDetailsComponent, canActivate:[GuardService]},
+   {path:'forgotPassword', component:ForgotPasswordComponent, canActivate:[GuardService]},
 ];
 
 @NgModule({

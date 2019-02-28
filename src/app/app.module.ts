@@ -26,6 +26,7 @@ import { DepartmentListComponent } from './department-list/department-list.compo
 import { DepartmentDetailsComponent } from './department-details/department-details.component';
 import { ServicesComponent } from './services/services.component';
 import { HttpClientModule } from '@angular/common/http';
+import { GuardService } from './guard.service';
 
 
 // import { HomeComponent } from './home/home.component';
@@ -62,7 +63,9 @@ import { HttpClientModule } from '@angular/common/http';
     MatIconModule,
     HttpClientModule
   ],
-  providers: [StudentService],
+  // providers: [StudentService],
+
+  providers: [GuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
