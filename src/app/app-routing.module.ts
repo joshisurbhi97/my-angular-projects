@@ -54,10 +54,10 @@ const routes: Routes = [
 
 
 
-  { path: '', redirectTo: '/computer', pathMatch: 'full'},
+  { path: '', redirectTo: '/computer-list', pathMatch: 'full'},
   // { path: '', component: ComputerComponent},
-  { path: 'computer', component: ComputerComponent},
-{ path: 'computer/:id', component: DepartmentDetailsComponent},
+  { path: 'computer-list', component: ComputerComponent},
+{ path: 'computer-list/:id', component: DepartmentDetailsComponent},
   { path: 'science', component: ScienceComponent},
   { path: "**", component: PageNotFoundComponent},
 

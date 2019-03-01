@@ -33,7 +33,9 @@ public selectedId;
      });
   }
 onSelect(department){
-this.router.navigate(['/computer', department.id])
+// this.router.navigate(['/computer', department.id])
+this.router.navigate([department.id], {relativeTo: this.route})
+
 }
 isSelected(department){
   return department.id === this.selectedId;

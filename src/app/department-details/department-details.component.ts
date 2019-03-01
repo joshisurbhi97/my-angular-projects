@@ -35,6 +35,8 @@ public departmentId;
   }
   gotoComputer(){
     let selectedId = this.departmentId ? this.departmentId: null;
-    this.router.navigate(['/computer', {id: selectedId}])
+    // this.router.navigate(['/computer', {id: selectedId}])
+    this.router.navigate(['../', {id: selectedId}],  {relativeTo: this.route})
+
   }
 }
