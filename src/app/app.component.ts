@@ -7,4 +7,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angular-projects';
+  isVs = true;
+
+  constructor() { }
+
+  ngOnInit() {
+  }
+  
+  onClick(){
+// this.isVs =!this.isVs
+this.title = `${this.title}-${new Date().getTime()}`
+  }
 }

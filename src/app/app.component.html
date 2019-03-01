@@ -36,7 +36,7 @@
 <!-- form about to end-->
 
 <!-- <app-department-list></app-department-list> -->
-<router-outlet></router-outlet>
+<!-- <router-outlet></router-outlet> -->
 
 
 
@@ -45,5 +45,20 @@
 <!-- <app-registration-form></app-registration-form> -->
 
 <!-- its about registration-form-->
+
+<!-- directive -->
+<!-- <app-directive></app-directive> -->
+<!-- directive-end -->
+
+<!-- lifecyclehooks -->
+<app-lifecycle *ngIf="isVs" [myDt]="this.title"></app-lifecycle>
+<div class="row">
+  <div class="col-md-12">
+    <input type ="button" class="btn" value="ok" (click)="onClick()">
+  </div>
+</div>
+<!-- lifecyclehooks end -->
+
+
 
 

@@ -27,6 +27,8 @@ import { DepartmentDetailsComponent } from './department-details/department-deta
 import { ServicesComponent } from './services/services.component';
 import { HttpClientModule } from '@angular/common/http';
 import { GuardService } from './guard.service';
+import { DirectiveComponent } from './directive/directive.component';
+import { LifecycleComponent } from './lifecycle/lifecycle.component';
 
 
 // import { HomeComponent } from './home/home.component';
@@ -49,7 +51,9 @@ import { GuardService } from './guard.service';
     TwoChildComponent,
     DepartmentListComponent,
     DepartmentDetailsComponent,
-    ServicesComponent
+    ServicesComponent,
+    DirectiveComponent,
+    LifecycleComponent
   ],
   imports: [
     BrowserModule,
