@@ -1,0 +1,83 @@
+<h1>Attribute Directives</h1>
+<div class="row">
+  <div class="col-md-12">
+    <p [ngStyle]="{'border':'2px solid red','font-size':'24px','font-weight':'bold'}">Angular</p>
+  </div>
+</div>
+
+
+
+<div class="row">
+  <div class="col-md-12">
+    <p [ngClass]="{'alert':true,'alert-danger':true, 'alert-dismissible':true}">   
+       <button type="button" class="close" data-dismiss="alert">&times;</button>
+      Codekul</p>
+  </div>
+</div>
+
+
+<h4>home work</h4>
+<input type="text" (mouseenter)= "hoverVar = false" (mouseleave)="hoverVar = true" [ngClass]="{'hoverMe': hoverVar}">
+
+<!-- 
+<h2>Custom directives</h2>
+<div class="row">
+  <div class="col-md-12">
+    <input type="text" appSample>
+  </div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+      <input type="text" [appSample]="'100px'">
+    </div>
+  </div> -->
+
+
+
+
+<h1>strutural directives</h1>
+<h4> ngIf directives </h4>
+
+<h2 *ngIf="displayName;else elseBlock ">
+  angular7 batch
+</h2>
+<ng-template #elseBlock>
+  <h2>codekul</h2>
+</ng-template>
+
+
+
+<!-- <div>
+<div *ngIf = "displayElse; then thenBlock; else elseBlock"></div>
+<ng-template #thenBlock>
+<h3>i m in block 2</h3>
+</ng-template>
+<ng-template #elseBlock>
+<h3>i m in block 3</h3>
+</ng-template>
+</div> -->
+
+
+
+
+<h2>ngSwitch directive</h2>
+
+<div [ngSwitch]="color">
+  <div *ngSwitchCase ="'red'">i have red color</div>
+  <div *ngSwitchCase ="'blue'">i have blue color</div>
+  <div *ngSwitchCase ="'green'">i have green color</div>
+  <div *ngSwitchCase ="'orange'">i have orange color</div>
+  <div *ngSwitchDefault>i have default color</div>
+</div>
+
+
+<h2>ngFor directive</h2>
+<div *ngFor="let student of students;index as i">
+<h2>{{i+1}}{{student }}</h2>
+</div>
+<!-- 
+<h2>ngFor directive</h2>
+<div *ngFor="let student of students;even as e">
+<h2>{{e}}{{student}}</h2>
+</div>  -->
