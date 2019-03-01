@@ -7,7 +7,9 @@ import { ActivatedRoute, Router, ParamMap } from '@angular/router';
     <h3>you selected deapartment with id = {{departmentId}}</h3> 
     <a (click)="goPrevious()" class="btn btn-success">Previous</a>
     <a (click)="goNext()" class="btn btn-success ml-3">Next</a>
-
+    <div>
+    <button (click)="gotoComputer()" type="button" class="btn btn-secondary">Back</button>
+    </div>
   `,
   styles: []
 })
@@ -25,10 +27,14 @@ public departmentId;
   }
   goPrevious(){
     let previousId = this.departmentId - 1;
-    this.router.navigate(['/computer',previousId])
+    this.router.navigate(['/computer',previousId]);
   }
   goNext(){
     let nextId = this.departmentId + 1
-    this.router.navigate(['/computer',nextId])
+    this.router.navigate(['/computer',nextId]);
+  }
+  gotoComputer(){
+    let selectedId = this.departmentId ? this.departmentId: null;
+    this.router.navigate(['/computer', {id: selectedId}])
   }
 }
