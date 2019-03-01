@@ -1,17 +1,17 @@
 import { Component, OnInit } from '@angular/core';
-
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-department-list',
   template: `
     <h3>Departments List</h3>
     <ul class="items">
-    <li *ngFor="let department of departments">
+    <li (click)="onSelect(department)" *ngFor="let department of departments">
     <span class="badge badge-success">{{department.id}}</span>{{department.name}}
     </li>
     </ul>
 
   `,
-  styles: ['ul{list-style-type:none}']
+  styles: ['.items{list-style-type:none;width:500px;}', 'li span{ padding:7px;background:purple;margin-right:8px;}', 'li{background:gray; width:100px;margin:10px;color:#fff;}']
 })
 export class DepartmentListComponent implements OnInit { 
 
@@ -23,9 +23,11 @@ export class DepartmentListComponent implements OnInit {
     {"id":6, "name":"sarasvati"}
   ]
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
-
+onSelect(department){
+this.router.navigate(['/computer', department.id]);
+}
 }

@@ -36,7 +36,6 @@
 <!-- form about to end-->
 
 <!-- <app-department-list></app-department-list> -->
-<!-- <router-outlet></router-outlet> -->
 
 
 
@@ -51,14 +50,41 @@
 <!-- directive-end -->
 
 <!-- lifecyclehooks -->
-<app-lifecycle *ngIf="isVs" [myDt]="this.title"></app-lifecycle>
+<!-- <app-lifecycle *ngIf="isVs" [myDt]="this.title"></app-lifecycle>
 <div class="row">
   <div class="col-md-12">
     <input type ="button" class="btn" value="ok" (click)="onClick()">
   </div>
-</div>
+</div> -->
 <!-- lifecyclehooks end -->
 
+<!-- observable -->
+<!-- <app-observable></app-observable> -->
+<!-- observable end -->
 
+<!-- about -->
+<!-- <app-about></app-about> -->
+<!-- about end -->
+
+<!-- duplicate-array -->
+<!-- <app-duplicate-array></app-duplicate-array> -->
+<!-- duplicate-array end -->
+
+
+
+<div class="container">
+  <div class="text-center">
+    <h1>Routing and Navigation</h1>
+  </div>
+  <nav>
+    <a routerLink="/computer" routerLinkActive="active" class="btn btn-info ">Computer</a>
+    <a routerLink="/science" routerLinkActive="active" class="btn btn-info ml-3">Science</a>
+
+  </nav>
+</div>
+
+
+
+<router-outlet></router-outlet>
 
 

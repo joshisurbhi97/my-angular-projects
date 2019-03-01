@@ -29,6 +29,11 @@ import { HttpClientModule } from '@angular/common/http';
 import { GuardService } from './guard.service';
 import { DirectiveComponent } from './directive/directive.component';
 import { LifecycleComponent } from './lifecycle/lifecycle.component';
+import { ObservableComponent } from './observable/observable.component';
+import { DuplicateArrayComponent } from './duplicate-array/duplicate-array.component';
+import { ComputerComponent } from './computer/computer.component';
+import { ScienceComponent } from './science/science.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 
 // import { HomeComponent } from './home/home.component';
@@ -53,7 +58,12 @@ import { LifecycleComponent } from './lifecycle/lifecycle.component';
     DepartmentDetailsComponent,
     ServicesComponent,
     DirectiveComponent,
-    LifecycleComponent
+    LifecycleComponent,
+    ObservableComponent,
+    DuplicateArrayComponent,
+    ComputerComponent,
+    ScienceComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,

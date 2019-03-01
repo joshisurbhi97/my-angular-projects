@@ -11,6 +11,10 @@ import { TwoChildComponent } from './employee-list/two-child.component';
 import { DepartmentListComponent } from './department-list/department-list.component';
 import { ServicesComponent } from './services/services.component';
 import { GuardService } from './guard.service';
+import { ComputerComponent } from './computer/computer.component';
+import { ScienceComponent } from './science/science.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DepartmentDetailsComponent } from './department-details/department-details.component';
 
 
 const routes: Routes = [
@@ -46,12 +50,22 @@ const routes: Routes = [
 
 
   // {path:'',component:ServicesComponent}
+
+
+
+
+  { path: '', redirectTo: '/computer', pathMatch: 'full'},
+  // { path: '', component: ComputerComponent},
+  { path: 'computer', component: ComputerComponent},
+{ path: 'computer/:id', component: DepartmentDetailsComponent},
+  { path: 'science', component: ScienceComponent},
+  { path: "**", component: PageNotFoundComponent},
+
   
 
-  {path:'',component:EmployeeListComponent},
-
-     {path:'employeedetails/:usNm',component:EmployeeDetailsComponent, canActivate:[GuardService]},
-   {path:'forgotPassword', component:ForgotPasswordComponent, canActivate:[GuardService]},
+//   {path:'',component:EmployeeListComponent},
+// {path:'employeedetails/:usNm',component:EmployeeDetailsComponent, canActivate:[GuardService]},
+//    {path:'forgotPassword', component:ForgotPasswordComponent, canActivate:[GuardService]},
 ];
 
 @NgModule({
@@ -59,4 +73,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomeComponent, AboutComponent, FormComponent, EmployeeListComponent, EmployeeDetailsComponent, ForgotPasswordComponent, DepartmentListComponent]
+export const routingComponents = [HomeComponent, AboutComponent, FormComponent, EmployeeListComponent, EmployeeDetailsComponent, ForgotPasswordComponent, DepartmentListComponent, ComputerComponent, ScienceComponent, PageNotFoundComponent, DepartmentDetailsComponent]
