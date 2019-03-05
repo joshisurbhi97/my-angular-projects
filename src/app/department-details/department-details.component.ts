@@ -5,6 +5,13 @@ import { ActivatedRoute, Router, ParamMap } from '@angular/router';
   selector: 'app-department-details',
   template: `
     <h3>you selected deapartment with id = {{departmentId}}</h3> 
+    <p>
+        <button (click)="showOverview()">Overview</button>
+        <button (click)="showContact()">Contact</button>
+
+    </p>
+    <router-outlet></router-outlet>
+
     <a (click)="goPrevious()" class="btn btn-success">Previous</a>
     <a (click)="goNext()" class="btn btn-success ml-3">Next</a>
     <div>
@@ -38,5 +45,11 @@ public departmentId;
     // this.router.navigate(['/computer', {id: selectedId}])
     this.router.navigate(['../', {id: selectedId}],  {relativeTo: this.route})
 
+  }
+  showOverview(){
+    this.router.navigate(['overview'], {relativeTo: this.route});
+  }
+  showContact(){
+    this.router.navigate(['contact'], {relativeTo: this.route});
   }
 }

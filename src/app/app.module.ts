@@ -34,6 +34,8 @@ import { DuplicateArrayComponent } from './duplicate-array/duplicate-array.compo
 import { ComputerComponent } from './computer/computer.component';
 import { ScienceComponent } from './science/science.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
+import { DepartmentContactComponent } from './department-contact/department-contact.component';
 
 
 // import { HomeComponent } from './home/home.component';
@@ -63,7 +65,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     DuplicateArrayComponent,
     ComputerComponent,
     ScienceComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    DepartmentOverviewComponent,
+    DepartmentContactComponent
   ],
   imports: [
     BrowserModule,

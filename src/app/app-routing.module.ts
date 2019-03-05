@@ -15,6 +15,8 @@ import { ComputerComponent } from './computer/computer.component';
 import { ScienceComponent } from './science/science.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DepartmentDetailsComponent } from './department-details/department-details.component';
+import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
+import { DepartmentContactComponent } from './department-contact/department-contact.component';
 
 
 const routes: Routes = [
@@ -49,17 +51,25 @@ const routes: Routes = [
 
 
 
-  // {path:'',component:ServicesComponent}
+  {path:'',component:ServicesComponent}
 
 
 
 
-  { path: '', redirectTo: '/computer-list', pathMatch: 'full'},
-  // { path: '', component: ComputerComponent},
-  { path: 'computer-list', component: ComputerComponent},
-{ path: 'computer-list/:id', component: DepartmentDetailsComponent},
-  { path: 'science', component: ScienceComponent},
-  { path: "**", component: PageNotFoundComponent},
+//   { path: '', redirectTo: '/computer', pathMatch: 'full'},
+//   // { path: '', component: ComputerComponent},
+//   { path: 'computer', component: ComputerComponent},
+// {
+//    path: 'computer/:id', 
+//    component: DepartmentDetailsComponent,
+//    children: [
+     
+//      {path:'overview', component:DepartmentOverviewComponent},
+//      {path:'contact', component:DepartmentContactComponent}
+//    ]
+//   },
+//   { path: 'science', component: ScienceComponent},
+//   { path: "**", component: PageNotFoundComponent},
 
   
 
@@ -73,4 +83,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomeComponent, AboutComponent, FormComponent, EmployeeListComponent, EmployeeDetailsComponent, ForgotPasswordComponent, DepartmentListComponent, ComputerComponent, ScienceComponent, PageNotFoundComponent, DepartmentDetailsComponent]
+export const routingComponents = [HomeComponent, AboutComponent, FormComponent, EmployeeListComponent, EmployeeDetailsComponent, ForgotPasswordComponent, DepartmentListComponent, ComputerComponent, ScienceComponent, PageNotFoundComponent, DepartmentDetailsComponent, DepartmentOverviewComponent, DepartmentContactComponent]
