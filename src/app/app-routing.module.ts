@@ -17,6 +17,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { DepartmentDetailsComponent } from './department-details/department-details.component';
 import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
 import { DepartmentContactComponent } from './department-contact/department-contact.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 
 const routes: Routes = [
@@ -51,7 +52,7 @@ const routes: Routes = [
 
 
 
-  {path:'',component:ServicesComponent}
+  // {path:'',component:ServicesComponent}
 
 
 
@@ -76,6 +77,11 @@ const routes: Routes = [
 //   {path:'',component:EmployeeListComponent},
 // {path:'employeedetails/:usNm',component:EmployeeDetailsComponent, canActivate:[GuardService]},
 //    {path:'forgotPassword', component:ForgotPasswordComponent, canActivate:[GuardService]},
+
+
+  {path:'',component:ReactiveFormComponent}
+
+
 ];
 
 @NgModule({

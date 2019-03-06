@@ -36,5 +36,21 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   .button-row button{
       margin-left:5px;
   }
+
+
+
+
+
+
+  body{
+    background:#f2f2f2;
+}
+.box{
+    border-top:solid 6px #f5ba1a;
+    background:#fff;
+    padding:30px;
+
+}
+
   
   

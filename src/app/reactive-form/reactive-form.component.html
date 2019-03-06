@@ -1,0 +1,20 @@
+<div class="container mt-5 box">
+  <h1 class="text-center">Registration Form</h1>
+  <form [formGroup]="registration">
+    <div class="form-group">
+      <label>FirstName</label>
+      <input type="text" class="form-control" formControlName="FirstName">
+    </div>
+    <div class="form-group">
+        <label>LastName</label>
+        <input type="text" class="form-control" formControlName="LastName">
+      </div>
+      <div class="form-group">
+          <label>Password</label>
+          <input type="Password" class="form-control" formControlName="Password">
+        </div> 
+
+        <button class="btn btn-primary" type="submit" (click)="submitData()">Register</button>
+        {{registration.value | json}}
+  </form>
+</div>

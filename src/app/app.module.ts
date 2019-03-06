@@ -36,6 +36,7 @@ import { ScienceComponent } from './science/science.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
 import { DepartmentContactComponent } from './department-contact/department-contact.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 
 
 // import { HomeComponent } from './home/home.component';
@@ -67,7 +68,8 @@ import { DepartmentContactComponent } from './department-contact/department-cont
     ScienceComponent,
     PageNotFoundComponent,
     DepartmentOverviewComponent,
-    DepartmentContactComponent
+    DepartmentContactComponent,
+    ReactiveFormComponent
   ],
   imports: [
     BrowserModule,
