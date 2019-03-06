@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { MaterialModule } from "./material/material.module";
-import { ReactiveFormsModule } from "@angular/forms";
+import { FormsModule, ReactiveFormsModule } from "@angular/forms";
 import {MatIconModule} from '@angular/material/icon';
 
 
@@ -37,6 +37,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
 import { DepartmentContactComponent } from './department-contact/department-contact.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 
 // import { HomeComponent } from './home/home.component';
@@ -69,7 +70,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     PageNotFoundComponent,
     DepartmentOverviewComponent,
     DepartmentContactComponent,
-    ReactiveFormComponent
+    ReactiveFormComponent,
+    CalculatorComponent
   ],
   imports: [
     BrowserModule,
@@ -81,7 +83,8 @@ import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
     MaterialModule,
     ReactiveFormsModule,
     MatIconModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   // providers: [StudentService],
 

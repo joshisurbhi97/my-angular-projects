@@ -18,6 +18,7 @@ import { DepartmentDetailsComponent } from './department-details/department-deta
 import { DepartmentOverviewComponent } from './department-overview/department-overview.component';
 import { DepartmentContactComponent } from './department-contact/department-contact.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { CalculatorComponent } from './calculator/calculator.component';
 
 
 const routes: Routes = [
@@ -79,9 +80,14 @@ const routes: Routes = [
 //    {path:'forgotPassword', component:ForgotPasswordComponent, canActivate:[GuardService]},
 
 
-  {path:'',component:ReactiveFormComponent}
+  // {path:'',component:ReactiveFormComponent}
 
 
+
+  {path:'',component:CalculatorComponent}
+
+
+  
 ];
 
 @NgModule({
@@ -89,4 +95,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomeComponent, AboutComponent, FormComponent, EmployeeListComponent, EmployeeDetailsComponent, ForgotPasswordComponent, DepartmentListComponent, ComputerComponent, ScienceComponent, PageNotFoundComponent, DepartmentDetailsComponent, DepartmentOverviewComponent, DepartmentContactComponent]
+export const routingComponents = [HomeComponent, AboutComponent, FormComponent, EmployeeListComponent, EmployeeDetailsComponent, ForgotPasswordComponent, DepartmentListComponent, ComputerComponent, ScienceComponent, PageNotFoundComponent, DepartmentDetailsComponent, DepartmentOverviewComponent, DepartmentContactComponent, CalculatorComponent]
