@@ -19,6 +19,8 @@ import { DepartmentOverviewComponent } from './department-overview/department-ov
 import { DepartmentContactComponent } from './department-contact/department-contact.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { PostReactiveFormComponent } from './post-reactive-form/post-reactive-form.component';
 
 
 const routes: Routes = [
@@ -84,9 +86,16 @@ const routes: Routes = [
 
 
 
-  {path:'',component:CalculatorComponent}
+  // {path:'',component:CalculatorComponent}
 
 
+  // {path:'',component:TemplateDrivenFormComponent}
+
+    {path:'',component:PostReactiveFormComponent}
+
+
+
+  
   
 ];
 
@@ -95,4 +104,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
-export const routingComponents = [HomeComponent, AboutComponent, FormComponent, EmployeeListComponent, EmployeeDetailsComponent, ForgotPasswordComponent, DepartmentListComponent, ComputerComponent, ScienceComponent, PageNotFoundComponent, DepartmentDetailsComponent, DepartmentOverviewComponent, DepartmentContactComponent, CalculatorComponent]
+export const routingComponents = [HomeComponent, AboutComponent, FormComponent, EmployeeListComponent, EmployeeDetailsComponent, ForgotPasswordComponent, DepartmentListComponent, ComputerComponent, ScienceComponent, PageNotFoundComponent, DepartmentDetailsComponent, DepartmentOverviewComponent, DepartmentContactComponent, CalculatorComponent, TemplateDrivenFormComponent, PostReactiveFormComponent]

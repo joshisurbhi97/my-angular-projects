@@ -1,0 +1,43 @@
+<h1> for post data</h1>
+<div class="container mt-5 box">
+  <h1 class="text-center">Registration Form</h1>
+  <form [formGroup]="postDataForm">
+     
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" class="form-control" formControlName="email" [ngClass]="{errorClass:(postDataForm.controls.email.invalid && (postDataForm.controls.email.touched || postDataForm.controls.email.dirty))}">
+      <p style="color:red" *ngIf="postDataForm.controls.email.invalid &&postDataForm.controls.email.touched">please enter email</p>
+
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="password" class="form-control" formControlName="password" [ngClass]="{errorClass:(postDataForm.controls.password.invalid && (postDataForm.controls.password.touched || postDataForm.controls.password.dirty))}">
+        <p style="color:red" *ngIf="postDataForm.controls.password.invalid &&postDataForm.controls.password.touched">please enter password</p>
+      </div> 
+
+        <button class="btn btn-primary" type="submit" (click)="submitPostData()">Register</button>
+        {{postDataForm.value | json}}
+  </form>
+</div>
+<!-- <h1> for post data</h1>
+<div class="container mt-5 box">
+  <h1 class="text-center">Registration Form</h1>
+  <form [formGroup]="postDataForm">
+     
+    <div class="form-group">
+      <label>Email</label>
+      <input type="email" class="form-control" formControlName="email" [ngClass]="{errorClass:(postDataForm.controls.email.invalid && (postDataForm.controls.email.touched || postDataForm.controls.email.dirty))}">
+      <p style="color:red" *ngIf="postDataForm.controls.email.invalid &&postDataForm.controls.email.touched">please enter email</p>
+
+    </div>
+    <div class="form-group">
+        <label>Password</label>
+        <input type="Password" class="form-control" [ngClass]="{errorClass:(postDataForm.controls.Password.invalid && (postDataForm.controls.Password.touched || postDataForm.controls.Password.dirty))}" formControlName="Password">
+        <p style="color:red" *ngIf="postDataForm.controls.Password.invalid &&postDataForm.controls.Password.touched">please enter password</p>
+      </div> 
+
+        <button class="btn btn-primary" type="submit"  [disabled]="!postDataForm.valid" (click)="submitPostData()">Register</button>
+        {{registration.value | json}}
+  </form>
+</div> -->
+

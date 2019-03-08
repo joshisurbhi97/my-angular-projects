@@ -3,18 +3,21 @@
   <form [formGroup]="registration">
     <div class="form-group">
       <label>FirstName</label>
-      <input type="text" class="form-control" formControlName="FirstName">
+      <input type="text" class="form-control" [class.is-invalid]="registration.get('FirstName').invalid && registration.get('FirstName').touched" formControlName="FirstName">
     </div>
     <div class="form-group">
         <label>LastName</label>
-        <input type="text" class="form-control" formControlName="LastName">
+        <input type="text" class="form-control" formControlName="LastName" [ngClass]="{errorClass:(registration.controls.LastName.invalid && (registration.controls.LastName.touched || registration.controls.LastName.dirty))}">
+        <p style="color:red" *ngIf="registration.controls.LastName.invalid &&registration.controls.LastName.touched">please enter last name</p>
+
       </div>
       <div class="form-group">
           <label>Password</label>
-          <input type="Password" class="form-control" formControlName="Password">
+          <input type="Password" class="form-control" [ngClass]="{errorClass:(registration.controls.Password.invalid && (registration.controls.Password.touched || registration.controls.Password.dirty))}" formControlName="Password">
+          <p style="color:red" *ngIf="registration.controls.LastName.invalid &&registration.controls.LastName.touched">please enter last name</p>
         </div> 
 
-        <button class="btn btn-primary" type="submit" (click)="submitData()">Register</button>
+        <button class="btn btn-primary" type="submit"  [disabled]="!registration.valid" (click)="submitData()">Register</button>
         {{registration.value | json}}
   </form>
 </div>

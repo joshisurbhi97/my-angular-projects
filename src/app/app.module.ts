@@ -38,6 +38,8 @@ import { DepartmentOverviewComponent } from './department-overview/department-ov
 import { DepartmentContactComponent } from './department-contact/department-contact.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { CalculatorComponent } from './calculator/calculator.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { PostReactiveFormComponent } from './post-reactive-form/post-reactive-form.component';
 
 
 // import { HomeComponent } from './home/home.component';
@@ -71,7 +73,9 @@ import { CalculatorComponent } from './calculator/calculator.component';
     DepartmentOverviewComponent,
     DepartmentContactComponent,
     ReactiveFormComponent,
-    CalculatorComponent
+    CalculatorComponent,
+    TemplateDrivenFormComponent,
+    PostReactiveFormComponent
   ],
   imports: [
     BrowserModule,
